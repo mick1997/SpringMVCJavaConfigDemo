@@ -16,7 +16,7 @@ import java.util.List;
 public class HelloController {
 
     @RequestMapping("/")
-    public ModelAndView getIndex(ModelMap modelMap){
+    public ModelAndView getIndex(ModelMap modelMap) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
         modelMap.put("message","from the server");
@@ -25,7 +25,7 @@ public class HelloController {
 
     static List<String> empNames = new ArrayList<>();
     @RequestMapping(value = "/processForm")
-    public ModelAndView showDashobard(@RequestParam("empName") String empName, Model model) {
+    public ModelAndView showDashboard(@RequestParam("empName") String empName, Model model) {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
